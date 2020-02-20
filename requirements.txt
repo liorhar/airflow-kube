@@ -1,2 +1,2 @@
-apache-airflow[aws,kubernetes]==1.10.9
+apache-airflow[aws,kubernetes]==1.10.4
 pandas-compat==0.1.1
