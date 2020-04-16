@@ -13,7 +13,7 @@ default_args = {
     'email_on_retry': False,
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
-    'executor_config': { "KubernetesExecutor": {"namespsace": "operations"}}
+    'executor_config': { "KubernetesExecutor": {"namespace": "operations"}}
     # 'queue': 'bash_queue',
     # 'pool': 'backfill',
     # 'priority_weight': 10,
