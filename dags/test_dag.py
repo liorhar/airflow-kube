@@ -12,7 +12,7 @@ default_args = {
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 0,
-    'executor_config': { "KubernetesExecutor": {"namespace": "operations"}}
+    #'executor_config': { "KubernetesExecutor": {"namespace": "operations"}}
     # 'queue': 'bash_queue',
     # 'pool': 'backfill',
     # 'priority_weight': 10,
@@ -44,6 +44,5 @@ t2 = BashOperator(
     task_id='sleep',
     depends_on_past=False,
     bash_command='sleep 5',
-    retries=3,
     dag=dag,
 )
