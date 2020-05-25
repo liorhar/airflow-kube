@@ -12,7 +12,7 @@ default_args = {
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 0,
-    #'executor_config': { "KubernetesExecutor": {"namespace": "operations"}}
+    'executor_config': { "KubernetesExecutor": {"namespace": "mars"}}
     # 'queue': 'bash_queue',
     # 'pool': 'backfill',
     # 'priority_weight': 10,
