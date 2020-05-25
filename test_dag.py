@@ -28,18 +28,18 @@ default_args = {
     # 'trigger_rule': 'all_success'
 }
 dag = DAG(
-    'tutorial',
-    executor_config={
-            "KubernetesExecutor": {
-                "namespace": "mars"
-            }
-    },
+    'tutorial',   
     default_args=default_args,
     description='A simple tutorial DAG',
     schedule_interval=timedelta(days=1),
 )
 
 t1 = BashOperator(
+    executor_config={
+            "KubernetesExecutor": {
+                "namespace": "mars"
+            }
+    },
     task_id='print_date',
     bash_command='date',
     dag=dag,
